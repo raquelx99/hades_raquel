@@ -118,7 +118,11 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
+<<<<<<< Updated upstream:Assets/Furniture/Source/Mesh/Materials/couch_BaseColor.mat
 --- !u!114 &5309828987098925753
+=======
+--- !u!114 &1342177345974420248
+>>>>>>> Stashed changes:Assets/Mega Fantasy Props Pack/Materials/paper.mat
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

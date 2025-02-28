@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Hadess.sln"
+    "Hadess.sln=======dotnet.defaultSolution": "hades_raquel.sln>>>>>>>Stashedchanges",
+    "dotnet.defaultSolution": "hades_raquel.sln"
 }
