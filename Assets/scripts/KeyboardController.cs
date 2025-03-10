@@ -6,7 +6,7 @@ using TMPro;
 public class Keyboard : MonoBehaviour
 {
 
-    public TextMeshPro display;
+    public TextMeshProUGUI display;
     private string correctPassword = "Alistair Blackwood";
     // Desbloqueia info no Monitor principal
     private string enteredPassword = "";
