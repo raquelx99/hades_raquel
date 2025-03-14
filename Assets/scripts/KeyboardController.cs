@@ -7,8 +7,9 @@ public class Keyboard : MonoBehaviour
 {
 
     public TextMeshProUGUI display;
-    private string correctPassword = "Alistair Blackwood";
-    // Desbloqueia info no Monitor principal
+    public GameObject diario;
+    public GameObject estrela;
+    private string correctPassword = "ALISTAIR BLACKWOOD";
     private string enteredPassword = "";
 
     public void AddDigit(string digit)
@@ -28,7 +29,7 @@ public class Keyboard : MonoBehaviour
     {
         if(enteredPassword == correctPassword){
             display.text = "LIBERADO";
-            // fazer info ser exibida no outro monitor
+            diario.SetActive(true);
         }
         else{
             display.text = "SENHA INCORRETA";

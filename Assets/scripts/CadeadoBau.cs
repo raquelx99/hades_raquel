@@ -8,11 +8,14 @@ public class CadeadoBau : MonoBehaviour
 
     public Animator chestAnimator;
     public XRSocketTagInteractor socketTagInteractor;
+    public GameObject card;
     private bool isUnlocked = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        card.SetActive(false);
+        
         if(socketTagInteractor != null)
         {
             socketTagInteractor.selectEntered.AddListener(onKeyInserted);
@@ -25,6 +28,7 @@ public class CadeadoBau : MonoBehaviour
             isUnlocked = true;
             chestAnimator.Play("BauAbrindo");
             gameObject.SetActive(false);
+            card.SetActive(true);
         }
     }
 }

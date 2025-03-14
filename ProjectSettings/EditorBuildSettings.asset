@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2 Realidades Scene.unity
     guid: 416c042468db8dd478068edc0c738a02
+  - enabled: 1
+    path: Assets/Scenes/Tela final.unity
+    guid: ec9d16e684960644d8a6610812f7a9c2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4a153d64a99ab354f8ba69daf3b20c7c,
       type: 2}
