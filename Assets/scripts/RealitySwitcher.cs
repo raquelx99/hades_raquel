@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
 
 public class RealitySwitch : MonoBehaviour
 {
     public GameObject spaceshipReality;
     public GameObject houseReality;
     public GameObject transitionEffect; 
+    public UnityEvent FirstSwitch;
+
 
     private bool isInSpaceship = true;
 
     private XRGrabInteractable grabInteractable;
+    private int switches = 0;
 
     void Start()
     {
@@ -29,7 +33,7 @@ public class RealitySwitch : MonoBehaviour
 
     public void SwitchReality()
     {
-       
+
         if (transitionEffect)
         {
             Instantiate(transitionEffect, transform.position, Quaternion.identity);
@@ -38,5 +42,10 @@ public class RealitySwitch : MonoBehaviour
         isInSpaceship = !isInSpaceship;
         spaceshipReality.SetActive(isInSpaceship);
         houseReality.SetActive(!isInSpaceship);
+        switches++;
+
+        if(switches <= 1){
+            FirstSwitch.Invoke();
+        }
     }
 }

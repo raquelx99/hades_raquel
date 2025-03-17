@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Meteor
   - Key
+  - Hourglass
+  - Star
+  - Card
   layers:
   - Default
   - TransparentFX

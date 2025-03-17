@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class Keyboard : MonoBehaviour
 {
 
-    public TextMeshPro display;
-    private string correctPassword = "Alistair Blackwood";
-    // Desbloqueia info no Monitor principal
+    public TextMeshProUGUI display;
+    public GameObject diario;
+    public GameObject estrela;
+    private string correctPassword = "ALISTAIR BLACKWOOD";
     private string enteredPassword = "";
+    public UnityEvent Solved;
+
+    void Start()
+    {
+        estrela.SetActive(false);
+    }
 
     public void AddDigit(string digit)
     {
@@ -27,8 +35,10 @@ public class Keyboard : MonoBehaviour
     public void CheckCode()
     {
         if(enteredPassword == correctPassword){
-            display.text = "LIBERADO";
-            // fazer info ser exibida no outro monitor
+            display.text = "ACESSO LIBERADO";
+            diario.SetActive(true);
+            estrela.SetActive(true);
+            Solved.Invoke();
         }
         else{
             display.text = "SENHA INCORRETA";
