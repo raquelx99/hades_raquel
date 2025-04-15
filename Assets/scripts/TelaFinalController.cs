@@ -27,7 +27,7 @@ public class TelaFinalController : MonoBehaviour
         startButton.onClick.AddListener(StartGame);
         menuButton.onClick.AddListener(BackToMenu);
         float tempoGasto = estadoDoJogo.tempoFinal;
-        int pontuacao = (tempoGasto >= 600f) ? 0 : Mathf.Max(0, Mathf.FloorToInt(1000 - tempoGasto));
+        int pontuacao = (estadoDoJogo.tempoEsgotado == true) ? 0 : Mathf.Max(0, Mathf.FloorToInt(1000 - tempoGasto));
         textoPontuacao.text = "Pontuação: " + pontuacao.ToString();
         TocarSomFinal();      
     }
